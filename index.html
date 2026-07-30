@@ -4,88 +4,452 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#0a0f1d">
-
-    <title>ACCREVIA Neurotech | Mechanistic Preclinical Validation of Implantable Neurotechnology</title>
-    <meta name="description" content="ACCREVIA Neurotech provides mechanistic preclinical validation, translational electrophysiology, and histopathology services for implantable neural interfaces and neurotechnologies.">
-    <meta name="keywords" content="neurotechnology CRO, neural interface validation, implantable neurotechnology, neuromodulation, brain computer interface, BCI, electrophysiology, histology, neural implants, bioelectronic medicine, preclinical testing">
-    <meta name="author" content="ACCREVIA Neurotech">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://www.accrevianeurotech.com/">
-
-    <meta property="og:site_name" content="ACCREVIA Neurotech">
-    <meta property="og:title" content="ACCREVIA Neurotech | Mechanistic Preclinical Validation">
-    <meta property="og:description" content="De-risking implantable neural interfaces through integrated biological, engineering, and computational characterization.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.accrevianeurotech.com/">
-    <meta property="og:image" content="https://www.accrevianeurotech.com/assets/og-image.jpg">
-    <meta property="og:image:alt" content="ACCREVIA Neurotech Advanced Neural Interface Platform">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ACCREVIANeuro">
-    <meta name="twitter:title" content="ACCREVIA Neurotech | Preclinical Neural Validation">
-    <meta name="twitter:description" content="Precision preclinical CRO services for next-generation neurotechnologies and neural interfaces.">
-    <meta name="twitter:image" content="https://www.accrevianeurotech.com/assets/og-image.jpg">
-
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <title>ACCREVIA Neurotech | Mechanistic Preclinical Validation</title>
+    <meta name="description" content="ACCREVIA Neurotech provides mechanistic preclinical validation, translational electrophysiology, and histopathology services.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MedicalOrganization",
-          "@id": "https://www.accrevianeurotech.com/#organization",
-          "name": "ACCREVIA Neurotech",
-          "url": "https://www.accrevianeurotech.com",
-          "logo": "https://www.accrevianeurotech.com/assets/logo.png",
-          "description": "Specialized Contract Research Organization (CRO) providing mechanistic preclinical validation for implantable neurotechnology and neural interfaces.",
-          "knowsAbout": [
-            "Brain-Computer Interfaces",
-            "Electrophysiology",
-            "Histopathology",
-            "Neuromodulation",
-            "Bioelectronic Medicine"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Business Development",
-            "email": "contact@accrevianeurotech.com"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.accrevianeurotech.com/#website",
-          "url": "https://www.accrevianeurotech.com",
-          "name": "ACCREVIA Neurotech",
-          "publisher": {
-            "@id": "https://www.accrevianeurotech.com/#organization"
-          }
+    <style>
+        :root {
+            --bg-dark: #070a12;
+            --bg-card: #0e1526;
+            --bg-card-hover: #152038;
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+            --text-primary: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(0, 242, 254, 0.3);
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --transition-fast: 0.2s ease;
+            --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-      ]
-    }
-    </script>
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-heading);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Navigation */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7, 10, 18, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #fff;
+            letter-spacing: 0.05em;
+        }
+
+        .logo-tag {
+            font-size: 0.65rem;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #000;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition-fast);
+        }
+
+        .nav-link:hover {
+            color: var(--accent-cyan);
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #000;
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(0, 242, 254, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 242, 254, 0.1);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding: 12rem 0 6rem 0;
+            background: radial-gradient(circle at 50% 20%, rgba(0, 242, 254, 0.08) 0%, rgba(7, 10, 18, 1) 70%);
+            text-align: center;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--accent-cyan);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.25rem);
+            max-width: 900px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            max-width: 650px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* Section Layouts */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .dark-bg {
+            background-color: #04060d;
+        }
+
+        .section-eyebrow {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .section-header.text-center {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-glow);
+            transform: translateY(-4px);
+        }
+
+        .card-icon {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        /* Tech Chips */
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tech-chip {
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            transition: var(--transition-fast);
+        }
+
+        .tech-chip:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
+        }
+
+        /* Timeline */
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .timeline-step {
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border-top: 2px solid var(--accent-cyan);
+        }
+
+        .step-num {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background: var(--bg-card);
+            padding: 4rem;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+        }
+
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 0 2rem 0;
+            background: #04060d;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 4rem;
+        }
+
+        .link-column ul {
+            list-style: none;
+        }
+
+        .link-column a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 900px) {
+            .nav-list, .header-cta {
+                display: none;
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <header class="site-header">
         <div class="header-container">
-            <a href="/" class="brand-logo" aria-label="ACCREVIA Neurotech Homepage">
+            <a href="#" class="brand-logo">
                 <span class="logo-text">ACCREVIA</span>
                 <span class="logo-tag">NEUROTECH</span>
             </a>
 
-            <nav class="nav-menu" id="primary-navigation" aria-label="Main Navigation">
+            <nav class="nav-menu">
                 <ul class="nav-list">
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
@@ -97,23 +461,16 @@
             <div class="header-cta">
                 <a href="#contact" class="btn btn-outline">Get in Touch</a>
             </div>
-
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="sr-only">Toggle menu</span>
-                <span class="hamburger-icon"></span>
-            </button>
         </div>
     </header>
 
-    <main id="main-content">
-
-        <section class="hero-section" aria-labelledby="hero-title">
-            <div class="hero-overlay"></div>
+    <main>
+        <section class="hero-section">
             <div class="container hero-content">
                 <div class="badge-pill">
                     <span class="badge-dot"></span> Next-Gen Preclinical Validation
                 </div>
-                <h1 id="hero-title" class="hero-title">
+                <h1 class="hero-title">
                     Decoding Failure Mechanisms in <span class="text-gradient">Implantable Neurotechnology</span>
                 </h1>
                 <p class="hero-description">
@@ -126,26 +483,7 @@
             </div>
         </section>
 
-        <section id="about" class="section about-section">
-            <div class="container">
-                <div class="grid grid-2col align-center">
-                    <div class="section-header text-left">
-                        <span class="section-eyebrow">The ACCREVIA Edge</span>
-                        <h2>Beyond Binary Pass/Fail Testing</h2>
-                    </div>
-                    <div class="content-block">
-                        <p class="lead-text">
-                            Standard preclinical models often identify <em>that</em> a neural implant failed, but miss <em>why</em>. 
-                        </p>
-                        <p>
-                            ACCREVIA bridges this diagnostic gap. We combine multi-scale electrophysiology, sub-micron histopathology, and computational modeling to elucidate micro-level tissue-device interactions, ensuring your bioelectronic device performs reliably across chronic lifetimes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="section services-section dark-bg">
+        <section id="services" class="section dark-bg">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-eyebrow">Expertise & Services</span>
@@ -180,7 +518,7 @@
             </div>
         </section>
 
-        <section id="technology" class="section technology-section">
+        <section id="technology" class="section">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-eyebrow">Target Platforms</span>
@@ -194,109 +532,51 @@
                     <div class="tech-chip">Bioelectronic Therapeutics</div>
                     <div class="tech-chip">Neural Prosthetics</div>
                     <div class="tech-chip">Closed-Loop Neuromodulation</div>
-                    <div class="tech-chip">Flexible Microelectrode Arrays</div>
-                    <div class="tech-chip">Autonomic Nerve Monitors</div>
                 </div>
             </div>
         </section>
 
-        <section id="framework" class="section framework-section dark-bg">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-eyebrow">Process</span>
-                    <h2>Integrated Validation Framework</h2>
-                </div>
-
-                <div class="timeline">
-                    <div class="timeline-step">
-                        <span class="step-num">01</span>
-                        <h4>Study Design & Simulation</h4>
-                        <p>Custom protocol tailoring and computational modeling aligned with regulatory expectations.</p>
-                    </div>
-                    <div class="timeline-step">
-                        <span class="step-num">02</span>
-                        <h4>Precision Implantation</h4>
-                        <p>Surgical execution using micron-precision stereotaxic and micro-surgical techniques.</p>
-                    </div>
-                    <div class="timeline-step">
-                        <span class="step-num">03</span>
-                        <h4>Continuous Data Mining</h4>
-                        <p>High-frequency electrophysiological recordings paired with continuous physiological tracking.</p>
-                    </div>
-                    <div class="timeline-step">
-                        <span class="step-num">04</span>
-                        <h4>Mechanistic Analytics</h4>
-                        <p>Cross-correlation of signal decay with inflammatory biomarkers and structural degradation.</p>
-                    </div>
-                    <div class="timeline-step">
-                        <span class="step-num">05</span>
-                        <h4>Translational Dossier</h4>
-                        <p>Comprehensive regulatory-ready documentation for FDA/EMA submissions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
+        <section id="contact" class="section dark-bg">
             <div class="container">
                 <div class="contact-wrapper">
                     <div class="contact-info">
                         <h2>De-Risk Your Neural Interface Development</h2>
                         <p>Connect with our scientific directors to discuss custom preclinical study designs and validation strategies.</p>
-                        <ul class="contact-details">
-                            <li><strong>Email:</strong> partner@accrevianeurotech.com</li>
-                            <li><strong>Focus:</strong> Translational & Preclinical R&D</li>
-                        </ul>
                     </div>
 
-                    <form class="contact-form" action="/api/contact" method="POST">
+                    <form class="contact-form" onsubmit="event.preventDefault();">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required placeholder="Dr. Jane Doe">
+                            <input type="text" id="name" placeholder="Dr. Jane Doe">
                         </div>
                         <div class="form-group">
                             <label for="email">Work Email</label>
-                            <input type="email" id="email" name="email" required placeholder="j.doe@company.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="organization">Organization / Company</label>
-                            <input type="text" id="organization" name="organization" required placeholder="Neurotech Systems Inc.">
+                            <input type="email" id="email" placeholder="j.doe@company.com">
                         </div>
                         <div class="form-group">
                             <label for="message">Project Overview</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your therapeutic application and preclinical timeline..."></textarea>
+                            <textarea id="message" rows="4" placeholder="Tell us about your project..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary full-width">Initiate Consultation</button>
+                        <button type="submit" class="btn btn-primary">Initiate Consultation</button>
                     </form>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="site-footer">
         <div class="container">
             <div class="footer-top">
-                <div class="footer-brand">
+                <div>
                     <span class="logo-text">ACCREVIA</span>
-                    <p>Pioneering mechanistic preclinical validation for the next generation of implantable bioelectronics.</p>
+                    <p>Pioneering mechanistic preclinical validation.</p>
                 </div>
                 <div class="footer-links">
                     <div class="link-column">
-                        <h5>Navigation</h5>
                         <ul>
-                            <li><a href="#about">About Us</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#technology">Applications</a></li>
-                            <li><a href="#framework">Framework</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-column">
-                        <h5>Legal</h5>
-                        <ul>
-                            <li><a href="/privacy-policy">Privacy Policy</a></li>
-                            <li><a href="/terms">Terms of Service</a></li>
-                            <li><a href="/compliance">Regulatory Compliance</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -307,7 +587,5 @@
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
 </body>
-
 </html>
